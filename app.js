@@ -60,12 +60,13 @@ app.get("/api/data", (req, res) => {
       ) {
         return;
       }
+      // Push each row into the parsedData array
       parsedData.push({
         id: values[0],
         name: values[1],
         age: values[2],
         email: values[3],
-      }); // Push each row into the parsedData array
+      });
     })
     .on("end", () => {
       // Filter out rows that are completely empty
